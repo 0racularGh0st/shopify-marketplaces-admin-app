@@ -118,7 +118,9 @@ async function startServer() {
     } catch (error) {
       console.error(error); // in practice these should be handled more gracefully
     }
-    return res.redirect(`/?host=${req.query.host}&shop=${req.query.shop}`); // wherever you want your user to end up after OAuth completes
+    return res.redirect(
+      `shopify-merchant-app.nigeldavid.in?host=${req.query.host}&shop=${req.query.shop}`,
+    ); // wherever you want your user to end up after OAuth completes
   });
 
   app.post('/webhooks', async (req, res) => {
@@ -145,12 +147,12 @@ async function startServer() {
     app.use(WebpackHotMiddleware(compiler));
   }
 
-  app.listen(process.env.PORT || 3000, function (err) {
+  app.listen(process.env.PORT || 8081, function (err) {
     if (err) {
       return console.error(err);
     }
 
-    console.log('Listening at http://localhost:' + process.env.PORT || 3000);
+    console.log('Listening at http://localhost:' + process.env.PORT || 8081);
   });
 }
 

@@ -17,7 +17,7 @@ const AppProvider = () => {
       i18n={translations}
       config={{
         host: new URL(location).searchParams.get('host'),
-        apiKey: API_KEY,
+        apiKey: API_KEY || process.env.API_KEY,
         forceRedirect: true,
       }}
     >
