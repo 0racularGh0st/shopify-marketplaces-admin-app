@@ -118,7 +118,9 @@ async function startServer() {
     } catch (error) {
       console.error(error); // in practice these should be handled more gracefully
     }
-    return res.redirect(`?host=${req.query.host}&shop=${req.query.shop}`); // wherever you want your user to end up after OAuth completes
+    return res.redirect(
+      `https://shopify-merchant-app.nigeldavid.in?host=${req.query.host}&shop=${req.query.shop}`,
+    ); // wherever you want your user to end up after OAuth completes
   });
 
   app.post('/webhooks', async (req, res) => {
