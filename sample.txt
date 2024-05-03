@@ -1,4 +1,4 @@
-http://localhost:8081/auth/callback
-http://localhost:8081/
-http://localhost:8081/login
-http://localhost:8081/auth
+https://shopify-merchant-app.nigeldavid.in/auth/callback
+https://shopify-merchant-app.nigeldavid.in/
+https://shopify-merchant-app.nigeldavid.in/login
+https://shopify-merchant-app.nigeldavid.in/auth
